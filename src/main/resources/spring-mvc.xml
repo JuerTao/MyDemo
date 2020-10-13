@@ -12,6 +12,16 @@
         <property name="prefix" value="/WEB-INF/html/"></property>
         <property name="suffix" value=".html"></property>
     </bean>
+
+<!--
+    使用这个配置的目的：(html是静态资源，jsp是非静态资源)
+        该注解的目的就是在SpringMVC的上下文定义一个org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler，会对进入DispatcherServlet请求进行判断
+        如果发现是静态资源的请求，就将该请求转由Web应用服务器默认的Servlet处理，如果不是静态资源的请求，才由DispatcherServlet继续处理
+
+        一般Web应用服务器默认的Servlet名称是"default"，因此DefaultServletHttpRequestHandler可以找到它。如果你所有的Web应用服务器的默认Servlet名称不是"default"，
+        则需要通过default-servlet-name属性显示指定：
+               <mvc:default-servlet-handler default-servlet-name="所使用的Web服务器默认使用的Servlet名称" />
+-->
     <mvc:default-servlet-handler/>
 
     <!--
