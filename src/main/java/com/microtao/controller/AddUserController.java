@@ -13,10 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/user")
 public class AddUserController {
 
-    @Autowired
-    private IUserService iQueryService;
     @RequestMapping("/addUser")
     public String addUser(){
-        return iq
+        return "SUCCESS";
     }
 }
