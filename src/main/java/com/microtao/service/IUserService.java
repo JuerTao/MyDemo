@@ -10,7 +10,7 @@ public interface IUserService {
     /**
      * 新增用户
      */
-    public Boolean addUser(User user);
+    public Boolean addUser();
 
     /**
      * 通过用户名删除用户
