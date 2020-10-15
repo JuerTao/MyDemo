@@ -19,7 +19,7 @@ public class IUserServiceImpl implements IUserService {
     public Boolean addUser() {
         User user = new User();
         user.setUserName("xaioming");
-        user.setPassword("123456");
+        user.setPass_word("123456");
         Integer result = userDao.insert(user);
         if (result > 0) {
             return true;

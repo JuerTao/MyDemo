@@ -18,5 +18,5 @@ public class User {
     private int id;
     @TableField(value = "user_name",exist = true)
     private String userName;
-    private String password;
+    private String pass_word;
 }
