@@ -21,6 +21,7 @@ public class IUserServiceImpl implements IUserService {
         user.setUserName("xaioming");
         user.setPass_word("123456");
         Integer result = userDao.insert(user);
+        String test = new String();
         if (result > 0) {
             return true;
         } else {
