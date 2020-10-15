@@ -1,6 +1,6 @@
 package com.microtao.service.impl;
 
-import com.microtao.dao.IUserDao;
+import com.microtao.dao.UserMapper;
 import com.microtao.entity.User;
 import com.microtao.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class IUserServiceImpl implements IUserService {
     @Autowired
-    private IUserDao userDao;
+    private UserMapper userDao;
 
     @Override
     public Boolean addUser() {
@@ -39,8 +39,8 @@ public class IUserServiceImpl implements IUserService {
     }
 
     @Override
-    public User queryUser(String userName) {
-        return null;
+    public User queryUser(User user) {
+        return userDao.queryUserByUsername(user.getUserName());
     }
 
 }

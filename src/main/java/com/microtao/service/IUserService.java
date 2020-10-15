@@ -25,6 +25,6 @@ public interface IUserService {
     /**
      * 通过用户名查新用户信息
      */
-    public User queryUser(String userName);
+    public User queryUser(User user);
 
 }
