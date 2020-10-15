@@ -4,6 +4,7 @@ import com.microtao.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  * @Author 於涛
@@ -18,6 +19,7 @@ public class AddUserController {
 
     @RequestMapping("/addUser")
     public String addUser(){
+        ModelAndView view = new ModelAndView();
         userServiceImpl.addUser();
         return "index";
     }
